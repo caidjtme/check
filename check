@@ -323,7 +323,7 @@ end)
 
 Tab:AddToggle({
 	Name = "Damage Boss",
-	Default = false,
+	Default = flase,
 	Callback = function(Value)
 _G.DameBossBob = Value
 while _G.DameBossBob do
@@ -440,7 +440,7 @@ Tab:AddButton({
 
 Tab2:AddToggle({
 	Name = "Anti Ring",
-	Default = false,
+	Default = true,
 	Callback = function(Value)
 		_G.AntiRing = Value
 while _G.AntiRing do
@@ -454,7 +454,7 @@ end
 
 Tab2:AddToggle({
 	Name = "Auto Remove Big Meteors",
-	Default = false,
+	Default = true,
 	Callback = function(Value)
 		_G.AutoRemoveBigMeteors = Value
 while _G.AutoRemoveBigMeteors do
@@ -468,7 +468,7 @@ end
 
 Tab2:AddToggle({
 	Name = "Auto Remove Small Meteors",
-	Default = false,
+	Default = true,
 	Callback = function(Value)
 		_G.AutoRemoveSmallMeteors = Value
 while _G.AutoRemoveSmallMeteors do
@@ -482,7 +482,7 @@ end
 
 Tab2:AddToggle({
 	Name = "Anti Void Damage",
-	Default = false,
+	Default = true,
 	Callback = function(Value)
 game.Workspace["VoidPart"].CanCollide = Value
 if Value == true then
