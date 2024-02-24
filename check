@@ -1,12 +1,3 @@
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-end
-
-game:GetService("GuiService"):ClearError()
-
-local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
-local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
-local Window = OrionLib:MakeWindow({IntroText = "Slap Battles 👏", IntroIcon = "rbxassetid://7733955740",Name = ("Slap Battles 👏".." | ".. identifyexecutor()), HidePremium = false, SaveConfig = false, IntroEnabled = true, ConfigFolder = "slap battles"})
 local Window = OrionLib:MakeWindow({Name = (GameName.." | ".. identifyexecutor()), HidePremium = false, SaveConfig = false, IntroEnabled = false, ConfigFolder = "slap battles"})
 
 if workspace:FindFirstChild("VoidPart") == nil then
@@ -43,7 +34,8 @@ local Tab2 = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddLabel("Owner Credits Script By [ PC ]")
+Tab:AddLabel("Owner Credits Script By [ Giang ]")
+Tab:AddLabel("DonjoSx Shared Script Me, GoodLuck")
 local InfoServer = Tab:AddSection({Name = "Info"})
 CanYouFps = Tab:AddLabel("Your Fps [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
 CheckSlap = Tab:AddLabel("Check Slap [ "..game.Players.LocalPlayer.leaderstats.Slaps.Value.." ]")
@@ -74,7 +66,7 @@ Tab:AddToggle({
 		_G.AutoTycoon = Value
 while _G.AutoTycoon do
 for _, v in pairs(workspace:GetChildren()) do
-if string.find(v.Name, "ÅTycoon") and v:FindFirstChild("Click") then
+if string.find(v.Name, "AutoTycoon") and v:FindFirstChild("Click") then
 fireclickdetector(v.Click.ClickDetector, 0)
 fireclickdetector(v.Click.ClickDetector, 1)
 end
@@ -145,13 +137,6 @@ end
 Tab:AddLabel("Script")
 
 Tab:AddButton({
-	Name = "Fe fly V3",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Fly_V3.lua"))()
-  	end    
-})
-
-Tab:AddButton({
 	Name = "Anti Lag",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Anti-lag.lua"))()
@@ -159,9 +144,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main
 })
 
 Tab:AddButton({
-	Name = "Inf Yield Delta",
+	Name = "Gaster hub",
 	Callback = function()
-      		loadstring(game:HttpGet("https://gist.githubusercontent.com/lxnnydev/c533c374ca4c1dcef4e1e10e33fa4a0c/raw/03e74f184f801dad77d3ebe1e2f18c6ac87ca612/delta___IY.gistfile1.txt.lua",true))()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/Rob/main/Rob"))()
   	end    
 })
 
@@ -169,13 +154,6 @@ Tab:AddButton({
 	Name = "Inf Yield",
 	Callback = function()
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "RemoteSpy",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/RemoteSpy-V2.lua", true))()
   	end    
 })
 
